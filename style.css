@@ -6,8 +6,15 @@
     text-decoration: none;
     background: #222;
 }
-body{
+/*body{
     overflow-x: hidden;
+}*/
+dody {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    align-items: center; /* Centrar el contenido verticalmente */
+    min-height: 100vh; /* Asegurar que el cuerpo ocupa al menos el 100% del viewport */
 }
 .hero-header{
     width:100%;
@@ -284,27 +291,13 @@ footer {
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Respnosiv design & displaying navbar for small screen */
-@media(max-width:930px)
-{
-    nav .togglebtn{
+/* Diseño responsivo y visualización de barra de navegación para pantalla pequeña */
+@media(max-width:930px) {
+    nav .togglebtn {
         display: initial;
     }
-    /* for toggle button**/
+    
+    /* animacion boton */
     .click {
         top:45px;
     }
@@ -312,22 +305,23 @@ footer {
         position: absolute;
         margin-top:12px
     }
-    .click span:first-child{
+    .click span:first-child {
         transform: rotate(-40deg);
     }
-    .click span:nth-child(2)
-    {
+    .click span:nth-child(2) {
         opacity: 0;
-        margin:0;
+        margin: 0;
     }
-    .click span:last-child{
+    .click span:last-child {
         transform: rotate(45deg);
-        top:0;
+        top: 0;
     }
-    nav .navlinks{
+    
+    /* nav desplegable */
+    nav .navlinks {
         position: absolute;
-        top:110px;
-        right:-100%;
+        top: 110px;
+        right: -100%;
         bottom: 0;
         width: 60%;
         height: 100vh;
@@ -337,25 +331,48 @@ footer {
         transition: 0.5s;
         padding: 25px 0px;
     }
-    nav .navlinks li{
+    nav .navlinks li {
         display: block;
     }
-    nav .navlinks li a{
+    nav .navlinks li a {
         display: block;
         margin-bottom: 15px;
         text-align: center;
     }
-    nav .navlinks.open{
-        right:0;
+    nav .navlinks.open {
+        right: 0;
     }
 }
-@media(max-width:768px)
-{
-    .container{
+
+@media(max-width:768px) {
+    /* ajustando layaut para pantallas mas chicas */
+    .container {
         flex-direction: column;
-        padding-top:2rem
+        padding-top: 2rem;
     }
-    .hero-text{
-        padding:40px 0px;
+    .hero-text {
+        padding: 40px 0px;
+    }
+    .container-card {
+        padding: 2rem; /* Ajustar el relleno para tarjetas en pantallas más pequeñas */
+    }
+    .card-img {
+        width: 100%; /* Ajustar el ancho de la tarjeta para pantallas más pequeñas */
+        height: auto; /* altura se ajuste según la relación de aspecto de la imagen */
+        margin: 0; /* Elimine el margen para utilizar el espacio */
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
